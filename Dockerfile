@@ -7,7 +7,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY entrypoint.sh ./
 
 RUN apt-get update && apt-get install -y wget unzip iproute2 systemctl &&\
-    wget -O temp.zip https://github.com/v2fly/v2ray-core/releases/download/v4.45.0/v2ray-linux-64.zip &&\
+    wget -O temp.zip https://github.com/v2fly/v2ray-core/releases/download/v5.7.0/v2ray-linux-64.zip &&\
     unzip temp.zip v2ray v2ctl geoip.dat geosite.dat &&\
     mv v2ray v &&\
     rm -f temp.zip &&\
