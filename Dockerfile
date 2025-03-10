@@ -7,7 +7,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY entrypoint.sh ./
 
 RUN apt-get update && apt-get install -y wget unzip iproute2 systemctl &&\
-    wget -O temp.zip "https://github.com/XTLS/Xray-core/releases/download/v25.1.1/Xray-linux-64.zip" &&\
+    wget -O temp.zip "https://github.com/XTLS/Xray-core/releases/download/v25.3.6/Xray-linux-64.zip" &&\
     unzip temp.zip xray geoip.dat geosite.dat &&\
     mv xray v &&\
     rm -f temp.zip &&\
