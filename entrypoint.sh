@@ -4,7 +4,7 @@
 base64 -d config > config.json
 UUID=${UUID:-'de04add9-5c68-8bab-950c-08cd5320df18'}
 VLESS_XHTTPPATH=${VLESS_XHTTPPATH:-'/path4xhttp'}
-VLESS_WSPATH=${VLESS_WSPATH:-'/vless'}
+VLESS_WSPATH=${VLESS_WSPATH:-'/path4ws'}
 sed -i "s#UUID#$UUID#g;s#VLESS_XHTTPPATH#${VLESS_XHTTPPATH}#g;s#VLESS_WSPATH#${VLESS_WSPATH}#g" config.json
 sed -i "s#VLESS_XHTTPPATH#${VLESS_XHTTPPATH}#g;s#VLESS_WSPATH#${VLESS_WSPATH}#g" /etc/nginx/nginx.conf
 
